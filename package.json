@@ -1,5 +1,5 @@
 {
-	"name": "@mineru98/searchts",
+	"name": "@dhrumil/searchts",
 	"description": "A library for filtering TypeScript objects based on a json SQL-like language, tsql",
 	"version": "1.0.1",
 	"url": "http://github.com/Mineru98/searchts",
