@@ -66,16 +66,18 @@
 		"nyc": "^12.0.2",
 		"should": "^13.2.1",
 		"ts-node": "^10.2.1",
+		"ts-node-dev": "^1.1.8",
 		"tslib": "^2.3.1",
 		"typescript": "^4.4.2"
 	},
 	"scripts": {
 		"build": "npm run build:ts && npm run build:babel",
-		"build:ts": "rm -rf lib && tsc",
+		"build:ts": "tsc",
 		"build:babel": "babel lib --out-dir lib --extensions \".ts\" --source-maps inline",
 		"test": "cross-env NODE_ENV=test mocha -r ts-node/register ./test/test.ts --reporter spec",
 		"test-watch": "cross-env NODE_ENV=test mocha --watch -r ts-node/register ./test/test.ts --reporter spec",
 		"coverage": "nyc yarn test",
-		"prepublishOnly": "npm run build"
+		"prepublishOnly": "npm run build",
+		"test:example": "npx ts-node-dev ./src/testing.ts"
 	}
 }
